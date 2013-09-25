@@ -35,3 +35,6 @@ add_subdirectory (pixmaps)
 
 set(module_install_dir ${DATA_INSTALL_DIR}/cmake/modules )
 install(FILES cmake/FindKPeople.cmake DESTINATION ${module_install_dir})
+find_package(Msgfmt REQUIRED)
+find_package(Gettext REQUIRED)
+add_subdirectory( po )

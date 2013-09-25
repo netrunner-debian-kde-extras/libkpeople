@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: libkpeople\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2013-09-22 01:49+0000\n"
+"PO-Revision-Date: 2013-09-23 00:43+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-POFile-SpellExtra: KPeople SweetPeople\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: contactitem.cpp:198
+msgid "Unknown contact"
+msgstr "Contacto desconhecido"
+
+#: examples/contactlistqml.cpp:29
+msgid "SweetPeople - KPeople Example"
+msgstr "SweetPeople - Exemplo do KPeople"
+
+#: plugins/core/emailplugin.cpp:40
+#, kde-format
+msgctxt "%1 is a specific email address"
+msgid "Email %1"
+msgstr "Enviar um e-mail a %1"
+
+#: widgets/mergedialog.cpp:65
+msgid "Duplicates Manager"
+msgstr "Gestor de Duplicados"
+
+#: widgets/mergedialog.cpp:74
+msgid "Select contacts to be merged"
+msgstr "Seleccionar os contactos a reunir"
+
+#: widgets/plugins/emaildetailswidget.cpp:38
+msgid "Email"
+msgstr "E-mail"
+
+#: widgets/plugins/mergecontactswidget.cpp:51
+msgid "Show Merge Suggestions..."
+msgstr "Mostrar as Sugestões de Reunião..."
+
+#: widgets/plugins/mergecontactswidget.cpp:89
+msgid "Merge with Selected Contacts"
+msgstr "Reunir com os Contactos Seleccionados"
+
+#: widgets/plugins/phonedetailswidget.cpp:40
+msgid "Phone"
+msgstr "Telefone"
