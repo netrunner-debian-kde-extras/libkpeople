@@ -1,0 +1,3 @@
+usr/lib/lib*.so.*
+usr/share/kde4/services/*
+usr/share/kde4/servicetypes/*

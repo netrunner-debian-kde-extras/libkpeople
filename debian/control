@@ -1,0 +1,37 @@
+Source: libkpeople
+Priority: extra
+Maintainer: Diane Trout <diane@ghic.org>
+Build-Depends: cmake,
+               debhelper (>= 9),
+               kdelibs5-dev,
+               libktpcommoninternalsprivate-dev,
+               libtelepathy-qt4-dev,
+               nepomuk-core-dev,
+               pkg-kde-tools (>= 0.9),
+               shared-desktop-ontologies
+Standards-Version: 3.9.4
+Section: libs
+Homepage: http://www.kde.org
+
+Package: libkpeople-dev
+Section: libdevel
+Architecture: any
+Depends: libkpeople4 (= ${binary:Version}), ${misc:Depends}
+Description: development files for libkpeople
+ Library providing metacontacts infrastructure based on Nepomuk
+ .
+ This package contains development files.
+
+Package: libkpeople4
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Library providing metacontacts infrastructure based on Nepomuk
+ Library providing metacontacts infrastructure based on Nepomuk
+
+Package: libkpeople4-dbg
+Section: debug
+Architecture: any
+Depends: libkpeople4 (= ${binary:Version}), ${misc:Depends}
+Description: debug symbols for package libkpeople4
+ kpeople runtime library debugging symbols
