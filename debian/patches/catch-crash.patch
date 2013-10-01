@@ -1,0 +1,13 @@
+--- a/src/personpluginmanager.cpp
++++ b/src/personpluginmanager.cpp
+@@ -69,7 +69,9 @@
+ {
+     QList<QAction*> actions;
+     Q_FOREACH(AbstractPersonPlugin *plugin, s_instance->plugins) {
+-        actions << plugin->actionsForPerson(person, parent);
++        if (plugin) {
++            actions << plugin->actionsForPerson(person, parent);
++        }
+     }
+     return actions;
+ }
