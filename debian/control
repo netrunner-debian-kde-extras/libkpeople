@@ -16,22 +16,22 @@ Homepage: http://www.kde.org
 Package: libkpeople-dev
 Section: libdevel
 Architecture: any
-Depends: libkpeople4 (= ${binary:Version}), ${misc:Depends}
+Depends: libkpeople1 (= ${binary:Version}), ${misc:Depends}
 Description: development files for libkpeople
  Library providing metacontacts infrastructure based on Nepomuk
  .
  This package contains development files.
 
-Package: libkpeople4
+Package: libkpeople1
 Section: libs
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Library providing metacontacts infrastructure based on Nepomuk
  Library providing metacontacts infrastructure based on Nepomuk
 
-Package: libkpeople4-dbg
+Package: libkpeople1-dbg
 Section: debug
 Architecture: any
-Depends: libkpeople4 (= ${binary:Version}), ${misc:Depends}
+Depends: libkpeople1 (= ${binary:Version}), ${misc:Depends}
 Description: debug symbols for package libkpeople4
  kpeople runtime library debugging symbols
