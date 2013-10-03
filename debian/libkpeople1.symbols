@@ -1,4 +1,4 @@
-libkpeople.so.1 libkpeople4 #MINVER#
+libkpeople.so.1 libkpeople1 #MINVER#
  _ZN7KPeople10PersonData11dataChangedEv@Base 0.0.80
  _ZN7KPeople10PersonData11loadContactERK7QString@Base 0.0.80
  _ZN7KPeople10PersonData11qt_metacallEN11QMetaObject4CallEiPPv@Base 0.0.80
@@ -219,7 +219,7 @@ libkpeople.so.1 libkpeople4 #MINVER#
  _ZTVN7KPeople19PersonsModelFeatureE@Base 0.0.80
  _ZTVN7KPeople20AbstractPersonPluginE@Base 0.0.80
  _ZTVN7KPeople21BasePersonsDataSourceE@Base 0.0.80
-libkpeoplewidgets.so.1 libkpeople4 #MINVER#
+libkpeoplewidgets.so.1 libkpeople1 #MINVER#
  _ZN13MergeDelegate11qt_metacallEN11QMetaObject4CallEiPPv@Base 0.0.80
  _ZN13MergeDelegate11qt_metacastEPKc@Base 0.0.80
  _ZN13MergeDelegate16staticMetaObjectE@Base 0.0.80

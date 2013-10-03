@@ -4,7 +4,6 @@ Maintainer: Diane Trout <diane@ghic.org>
 Build-Depends: cmake,
                debhelper (>= 9),
                kdelibs5-dev,
-               libktpcommoninternalsprivate-dev,
                libtelepathy-qt4-dev,
                nepomuk-core-dev,
                pkg-kde-tools (>= 0.9),
@@ -33,5 +32,5 @@ Package: libkpeople1-dbg
 Section: debug
 Architecture: any
 Depends: libkpeople1 (= ${binary:Version}), ${misc:Depends}
-Description: debug symbols for package libkpeople4
+Description: debug symbols for package libkpeople
  kpeople runtime library debugging symbols
