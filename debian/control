@@ -27,6 +27,9 @@ Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Library providing metacontacts infrastructure based on Nepomuk
  Library providing metacontacts infrastructure based on Nepomuk
+ .
+ This library allows you to read meta data and initiate
+ various actions for a contact.
 
 Package: libkpeople1-dbg
 Section: debug
