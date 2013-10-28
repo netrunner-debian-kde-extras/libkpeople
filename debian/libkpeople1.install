@@ -2,3 +2,4 @@ usr/lib/lib*.so.*
 usr/lib/kde4/*.so
 usr/share/kde4/services/*
 usr/share/kde4/servicetypes/*
+usr/share/locale/*/LC_MESSAGES/libkpeople.mo
