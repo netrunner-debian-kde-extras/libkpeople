@@ -1,5 +1,5 @@
 Source: libkpeople
-Priority: extra
+Priority: optional
 Maintainer: Diane Trout <diane@ghic.org>
 Build-Depends: cmake,
                debhelper (>= 9),
@@ -22,11 +22,11 @@ Description: development files for libkpeople
  This package contains development files.
 
 Package: libkpeople1
-Section: libs
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Library providing metacontacts infrastructure based on Nepomuk
- Library providing metacontacts infrastructure based on Nepomuk
+ KPeople uses Nepomuk to allow grouping multiple accounts into a
+ single identity.
  .
  This library allows you to read meta data and initiate
  various actions for a contact.
