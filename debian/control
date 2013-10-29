@@ -35,5 +35,6 @@ Package: libkpeople1-dbg
 Section: debug
 Architecture: any
 Depends: libkpeople1 (= ${binary:Version}), ${misc:Depends}
+Recommends: kdelibs5-dbg, nepomuk-core-dbg, libsoprano-dbg
 Description: debug symbols for package libkpeople
  kpeople runtime library debugging symbols
