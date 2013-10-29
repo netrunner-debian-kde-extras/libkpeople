@@ -1,5 +1,7 @@
-usr/lib/lib*.so.*
 usr/lib/kde4/*.so
+usr/lib/kde4/imports/org/kde/people/*
+usr/lib/lib*.so.*
+usr/share/kde4/apps/kpeople/dummy_avatar.png
 usr/share/kde4/services/*
 usr/share/kde4/servicetypes/*
 usr/share/locale/*/LC_MESSAGES/libkpeople.mo
