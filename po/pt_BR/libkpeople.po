@@ -55,4 +55,3 @@ msgstr "Mesclar os contatos selecionados"
 #: widgets/plugins/phonedetailswidget.cpp:40
 msgid "Phone"
 msgstr "Telefone"
-
