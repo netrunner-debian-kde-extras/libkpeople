@@ -1,16 +1,16 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Martin Schlander <mschlander@opensuse.org>, 2013.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2013-09-22 01:49+0000\n"
-"PO-Revision-Date: 2013-09-23 19:40+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
-"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
-"Language: da\n"
+"PO-Revision-Date: 2013-09-22 13:10+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: contactitem.cpp:198
 msgid "Unknown contact"
-msgstr "Ukendt kontakt"
+msgstr "Onbekende contactpersoon"
 
 #: examples/contactlistqml.cpp:29
 msgid "SweetPeople - KPeople Example"
-msgstr "SweetPeople - KPeople eksempel"
+msgstr "SweetPeople - KPeople voorbeeld"
 
 #: plugins/core/emailplugin.cpp:40
 #, kde-format
@@ -33,11 +33,11 @@ msgstr "E-mail %1"
 
 #: widgets/mergedialog.cpp:65
 msgid "Duplicates Manager"
-msgstr "Håndtering af dubletter"
+msgstr "Beheerder van duplicaten"
 
 #: widgets/mergedialog.cpp:74
 msgid "Select contacts to be merged"
-msgstr "Vælg kontakter der skal flettes"
+msgstr "Samen te voegen contactpersonen selecteren"
 
 #: widgets/plugins/emaildetailswidget.cpp:38
 msgid "Email"
@@ -45,12 +45,12 @@ msgstr "E-mail"
 
 #: widgets/plugins/mergecontactswidget.cpp:51
 msgid "Show Merge Suggestions..."
-msgstr "Vis fletteforslag..."
+msgstr "Suggesties voor samenvoegen tonen..."
 
 #: widgets/plugins/mergecontactswidget.cpp:89
 msgid "Merge with Selected Contacts"
-msgstr "Flet med valgte kontakter"
+msgstr "Met geselecteerde contactpersonen samenvoegen"
 
 #: widgets/plugins/phonedetailswidget.cpp:40
 msgid "Phone"
-msgstr "Telefon"
+msgstr "Telefoon"
