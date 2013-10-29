@@ -1,3 +1,4 @@
+# SymbolsHelper-Confirmed: 0.1.0 amd64
 libkpeople.so.1 libkpeople1 #MINVER#
  _ZN7KPeople10PersonData11dataChangedEv@Base 0.0.80
  _ZN7KPeople10PersonData11loadContactERK7QString@Base 0.0.80
@@ -22,6 +23,7 @@ libkpeople.so.1 libkpeople1 #MINVER#
  _ZN7KPeople11ContactItem14addContactDataEiRK8QVariant@Base 0.0.80
  _ZN7KPeople11ContactItem14setContactDataEiRK8QVariant@Base 0.0.80
  _ZN7KPeople11ContactItem17finishLoadingDataEv@Base 0.0.80
+ _ZN7KPeople11ContactItem5clearEv@Base 0.1.0
  _ZN7KPeople11ContactItem8loadDataEPNS_12PersonsModelE@Base 0.0.80
  _ZN7KPeople11ContactItemC1ERK4QUrl@Base 0.0.80
  _ZN7KPeople11ContactItemC2ERK4QUrl@Base 0.0.80
@@ -303,11 +305,7 @@ libkpeoplewidgets.so.1 libkpeople1 #MINVER#
  _ZTVN7KPeople17PersonDetailsViewE@Base 0.0.80
  _ZTVN7KPeople19PersonDetailsDialogE@Base 0.0.80
  _ZTVN7KPeople27AbstractPersonDetailsWidgetE@Base 0.0.80
- _ZThn16_N7KPeople11MergeDialogD0Ev@Base 0.0.80
- _ZThn16_N7KPeople11MergeDialogD1Ev@Base 0.0.80
- _ZThn16_N7KPeople17PersonDetailsViewD0Ev@Base 0.0.80
- _ZThn16_N7KPeople17PersonDetailsViewD1Ev@Base 0.0.80
- _ZThn16_N7KPeople19PersonDetailsDialogD0Ev@Base 0.0.80
- _ZThn16_N7KPeople19PersonDetailsDialogD1Ev@Base 0.0.80
- _ZThn16_N7KPeople27AbstractPersonDetailsWidgetD0Ev@Base 0.0.80
- _ZThn16_N7KPeople27AbstractPersonDetailsWidgetD1Ev@Base 0.0.80
+ (c++)"non-virtual thunk to KPeople::AbstractPersonDetailsWidget::~AbstractPersonDetailsWidget()@Base" 0.0.80
+ (c++)"non-virtual thunk to KPeople::MergeDialog::~MergeDialog()@Base" 0.0.80
+ (c++)"non-virtual thunk to KPeople::PersonDetailsDialog::~PersonDetailsDialog()@Base" 0.0.80
+ (c++)"non-virtual thunk to KPeople::PersonDetailsView::~PersonDetailsView()@Base" 0.0.80
