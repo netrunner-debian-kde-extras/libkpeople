@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Burkhard Lück <lueck@hube-lueck.de>, 2013.
+# Burkhard Lück <lueck@hube-lueck.de>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-22 01:49+0000\n"
-"PO-Revision-Date: 2013-09-22 15:51+0200\n"
+"POT-Creation-Date: 2014-02-16 04:05+0000\n"
+"PO-Revision-Date: 2014-02-15 10:53+0100\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,19 +17,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: contactitem.cpp:198
-msgid "Unknown contact"
-msgstr "Unbekannter Kontakt"
-
 #: examples/contactlistqml.cpp:29
 msgid "SweetPeople - KPeople Example"
 msgstr "Nette Leute - Beispiel für KPeople"
-
-#: plugins/core/emailplugin.cpp:40
-#, kde-format
-msgctxt "%1 is a specific email address"
-msgid "Email %1"
-msgstr "E-Mail %1"
 
 #: widgets/mergedialog.cpp:65
 msgid "Duplicates Manager"
@@ -39,7 +29,12 @@ msgstr "Verwaltung von Duplikaten"
 msgid "Select contacts to be merged"
 msgstr "Kontakte zum Zusammenführen auswählen"
 
-#: widgets/plugins/emaildetailswidget.cpp:38
+#. i18n: ectx: property (text), widget (QLabel, avatarPixmapLabel)
+#: widgets/person-details-presentation.ui:43
+msgid "Avatar"
+msgstr "Avatar"
+
+#: widgets/plugins/emaildetailswidget.cpp:50
 msgid "Email"
 msgstr "E-Mail"
 
@@ -54,3 +49,13 @@ msgstr "Mit ausgewählte Kontakten zusammenführen"
 #: widgets/plugins/phonedetailswidget.cpp:40
 msgid "Phone"
 msgstr "Telefon"
+
+#~ msgid "Form"
+#~ msgstr "Formular"
+
+#~ msgid "Unknown contact"
+#~ msgstr "Unbekannter Kontakt"
+
+#~ msgctxt "%1 is a specific email address"
+#~ msgid "Email %1"
+#~ msgstr "E-Mail %1"

@@ -2,13 +2,13 @@
 # Copyright (C) 2013 libkpeople developers
 # This file is distributed under the same license as the libkpeople package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2013.
+# Yuri Chornoivan <yurchor@ukr.net>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-22 01:49+0000\n"
-"PO-Revision-Date: 2013-09-22 04:53+0300\n"
+"POT-Creation-Date: 2014-02-16 04:05+0000\n"
+"PO-Revision-Date: 2014-02-15 09:09+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -19,19 +19,9 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: contactitem.cpp:198
-msgid "Unknown contact"
-msgstr "Невідомий контакт"
-
 #: examples/contactlistqml.cpp:29
 msgid "SweetPeople - KPeople Example"
 msgstr "SweetPeople — приклад KPeople"
-
-#: plugins/core/emailplugin.cpp:40
-#, kde-format
-msgctxt "%1 is a specific email address"
-msgid "Email %1"
-msgstr "Надіслати за адресою %1"
 
 #: widgets/mergedialog.cpp:65
 msgid "Duplicates Manager"
@@ -41,7 +31,12 @@ msgstr "Керування дублікатами"
 msgid "Select contacts to be merged"
 msgstr "Виберіть записи контактів, які слід об’єднати"
 
-#: widgets/plugins/emaildetailswidget.cpp:38
+#. i18n: ectx: property (text), widget (QLabel, avatarPixmapLabel)
+#: widgets/person-details-presentation.ui:43
+msgid "Avatar"
+msgstr "Аватар"
+
+#: widgets/plugins/emaildetailswidget.cpp:50
 msgid "Email"
 msgstr "Електронна пошта"
 
@@ -56,3 +51,13 @@ msgstr "Об’єднати з позначеними записами конт�
 #: widgets/plugins/phonedetailswidget.cpp:40
 msgid "Phone"
 msgstr "Телефон"
+
+#~ msgid "Form"
+#~ msgstr "Форма"
+
+#~ msgid "Unknown contact"
+#~ msgstr "Невідомий контакт"
+
+#~ msgctxt "%1 is a specific email address"
+#~ msgid "Email %1"
+#~ msgstr "Надіслати за адресою %1"

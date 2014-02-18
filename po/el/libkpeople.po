@@ -1,0 +1,51 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Antonis Geralis <gaantonio@civil.auth.gr>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-02-16 04:05+0000\n"
+"PO-Revision-Date: 2014-02-04 21:37+0200\n"
+"Last-Translator: Antonis Geralis <gaantonio@civil.auth.gr>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: examples/contactlistqml.cpp:29
+msgid "SweetPeople - KPeople Example"
+msgstr "SweetPeople - Παράδειγμα KPeople"
+
+#: widgets/mergedialog.cpp:65
+msgid "Duplicates Manager"
+msgstr "Διαχειριστής διπλότυπων"
+
+#: widgets/mergedialog.cpp:74
+msgid "Select contacts to be merged"
+msgstr "Επιλέξτε επαφές για συγχώνευση"
+
+#. i18n: ectx: property (text), widget (QLabel, avatarPixmapLabel)
+#: widgets/person-details-presentation.ui:43
+msgid "Avatar"
+msgstr ""
+
+#: widgets/plugins/emaildetailswidget.cpp:50
+msgid "Email"
+msgstr "Email"
+
+#: widgets/plugins/mergecontactswidget.cpp:51
+msgid "Show Merge Suggestions..."
+msgstr "Εμφάνιση προτάσεων για συγχώνευση..."
+
+#: widgets/plugins/mergecontactswidget.cpp:89
+msgid "Merge with Selected Contacts"
+msgstr "Συγχώνευση με επιλεγμένες επαφές"
+
+#: widgets/plugins/phonedetailswidget.cpp:40
+msgid "Phone"
+msgstr "Τηλέφωνο"

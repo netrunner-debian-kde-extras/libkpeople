@@ -17,14 +17,17 @@
 */
 
 
-#include "personpluginmanager.h"
-#include "abstractpersonplugin.h"
+#include "personpluginmanager_p.h"
 #include "basepersonsdatasource.h"
 
-#include <QAction>
+#include "abstractpersonaction.h"
+
 #include <KService>
 #include <KServiceTypeTrader>
 #include <KPluginInfo>
+#include <KDebug>
+
+#include <QMutex>
 
 #include <kdemacros.h>
 
@@ -35,46 +38,96 @@ class PersonPluginManagerPrivate
 public:
     PersonPluginManagerPrivate();
     ~PersonPluginManagerPrivate();
-    QList<AbstractPersonPlugin*> plugins;
-    BasePersonsDataSource *presencePlugin;
+    QList<AbstractPersonAction*> actionPlugins;
+    QHash<QString /* SourceName*/, BasePersonsDataSource*> dataSourcePlugins;
+
+    void loadDataSourcePlugins();
+    void loadActionsPlugins();
+    bool m_loadedDataSourcePlugins;
+    bool m_loadedActionsPlugins;
+    QMutex m_mutex;
+
 };
 
 K_GLOBAL_STATIC(PersonPluginManagerPrivate, s_instance);
 
-PersonPluginManagerPrivate::PersonPluginManagerPrivate()
+PersonPluginManagerPrivate::PersonPluginManagerPrivate():
+    m_loadedDataSourcePlugins(false),
+    m_loadedActionsPlugins(false)
 {
-    presencePlugin = 0;
-
-    KService::List pluginList = KServiceTypeTrader::self()->query(QLatin1String("KPeople/Plugin"));
-    Q_FOREACH(const KService::Ptr &service, pluginList) {
-        plugins << service->createInstance<AbstractPersonPlugin>(0);
-    }
-
-    KService::Ptr imService = KServiceTypeTrader::self()->preferredService("KPeople/DataSource");
-    if (!imService.isNull()) {
-        presencePlugin = imService->createInstance<BasePersonsDataSource>(0);
-    }
-    if (!presencePlugin) {
-        presencePlugin = new BasePersonsDataSource(0);
-    }
 }
 
 PersonPluginManagerPrivate::~PersonPluginManagerPrivate()
 {
-    qDeleteAll(plugins);
-    presencePlugin->deleteLater();
+    qDeleteAll(dataSourcePlugins);
+    qDeleteAll(actionPlugins);
 }
 
-QList<QAction*> PersonPluginManager::actionsForPerson(PersonDataPtr person, QObject *parent)
+void PersonPluginManagerPrivate::loadDataSourcePlugins()
 {
-    QList<QAction*> actions;
-    Q_FOREACH(AbstractPersonPlugin *plugin, s_instance->plugins) {
-        actions << plugin->actionsForPerson(person, parent);
+    KService::List pluginList = KServiceTypeTrader::self()->query(QLatin1String("KPeople/DataSource"));
+    Q_FOREACH(const KService::Ptr &service, pluginList) {
+        BasePersonsDataSource* dataSource = service->createInstance<BasePersonsDataSource>(0);
+        if (dataSource) {
+            dataSourcePlugins[dataSource->sourcePluginId()] = dataSource;
+        } else {
+            kWarning() << "Failed to create data source " << service->name() << service->path();
+        }
     }
-    return actions;
+    m_loadedDataSourcePlugins = true;
 }
 
-BasePersonsDataSource* PersonPluginManager::presencePlugin()
+void PersonPluginManagerPrivate::loadActionsPlugins()
 {
-    return s_instance->presencePlugin;
+    KService::List personPluginList = KServiceTypeTrader::self()->query(QLatin1String("KPeople/Plugin"));
+    Q_FOREACH(const KService::Ptr &service, personPluginList) {
+        AbstractPersonAction *plugin = service->createInstance<AbstractPersonAction>(0);
+        if (plugin) {
+            qDebug() << "found plugin" << service->name();
+            actionPlugins << plugin;
+        }
+    }
+    m_loadedActionsPlugins = true;
+}
+
+void PersonPluginManager::setDataSourcePlugins(const QHash<QString, BasePersonsDataSource* > &dataSources)
+{
+    s_instance->m_mutex.lock();
+    qDeleteAll(s_instance->dataSourcePlugins);
+    s_instance->dataSourcePlugins.clear();
+    s_instance->dataSourcePlugins = dataSources;
+    s_instance->m_loadedDataSourcePlugins = true;
+    s_instance->m_mutex.unlock();
+}
+
+QList<BasePersonsDataSource*> PersonPluginManager::dataSourcePlugins()
+{
+    s_instance->m_mutex.lock();
+    if (!s_instance->m_loadedDataSourcePlugins) {
+        s_instance->loadDataSourcePlugins();
+    }
+    s_instance->m_mutex.unlock();
+    return s_instance->dataSourcePlugins.values();
+}
+
+BasePersonsDataSource* PersonPluginManager::dataSource(const QString &sourceId)
+{
+    s_instance->m_mutex.lock();
+    if (!s_instance->m_loadedDataSourcePlugins) {
+        s_instance->loadDataSourcePlugins();
+    }
+    s_instance->m_mutex.unlock();
+
+    return s_instance->dataSourcePlugins[sourceId];
+}
+
+QList<AbstractPersonAction*> PersonPluginManager::actions()
+{
+    s_instance->m_mutex.lock();
+    if (!s_instance->m_loadedActionsPlugins) {
+        s_instance->loadActionsPlugins();
+    }
+    s_instance->m_mutex.unlock();
+
+    return s_instance->actionPlugins;
 }
