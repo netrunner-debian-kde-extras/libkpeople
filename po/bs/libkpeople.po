@@ -1,0 +1,61 @@
+# Bosnian translation for bosnianuniversetranslation
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the bosnianuniversetranslation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bosnianuniversetranslation\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-02-16 04:05+0000\n"
+"PO-Revision-Date: 2013-12-15 15:33+0000\n"
+"Last-Translator: Nermina Ahmić <nahmic1@etf.unsa.ba>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2013-12-16 05:34+0000\n"
+"X-Generator: Launchpad (build 16869)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: examples/contactlistqml.cpp:29
+msgid "SweetPeople - KPeople Example"
+msgstr "SweetPeople - KPeople primjer"
+
+#: widgets/mergedialog.cpp:65
+msgid "Duplicates Manager"
+msgstr "Menadžer duplikata"
+
+#: widgets/mergedialog.cpp:74
+msgid "Select contacts to be merged"
+msgstr "Označava kontakte koji se trebaju povezati"
+
+#. i18n: ectx: property (text), widget (QLabel, avatarPixmapLabel)
+#: widgets/person-details-presentation.ui:43
+msgid "Avatar"
+msgstr ""
+
+#: widgets/plugins/emaildetailswidget.cpp:50
+msgid "Email"
+msgstr "E-pošta"
+
+#: widgets/plugins/mergecontactswidget.cpp:51
+msgid "Show Merge Suggestions..."
+msgstr "Prikaži prijedloge povezivanja..."
+
+#: widgets/plugins/mergecontactswidget.cpp:89
+msgid "Merge with Selected Contacts"
+msgstr "Poveži sa označenim kontaktima"
+
+#: widgets/plugins/phonedetailswidget.cpp:40
+msgid "Phone"
+msgstr "Telefon"
+
+#~ msgid "Unknown contact"
+#~ msgstr "Nepoznat kontakt"
+
+#~ msgctxt "o/o1 is a specific email address"
+#~ msgid "Email %1"
+#~ msgstr "E-pošta %1"

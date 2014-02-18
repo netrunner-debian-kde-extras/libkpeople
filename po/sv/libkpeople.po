@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@comhem.se>, 2013.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-22 01:49+0000\n"
-"PO-Revision-Date: 2013-09-22 14:06+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@comhem.se>\n"
+"POT-Creation-Date: 2014-02-16 04:05+0000\n"
+"PO-Revision-Date: 2014-02-15 09:01+0100\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -17,19 +17,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.4\n"
 
-#: contactitem.cpp:198
-msgid "Unknown contact"
-msgstr "Okänd kontakt"
-
 #: examples/contactlistqml.cpp:29
 msgid "SweetPeople - KPeople Example"
 msgstr "Kpeople-exempel: Trevligt folk"
-
-#: plugins/core/emailplugin.cpp:40
-#, kde-format
-msgctxt "%1 is a specific email address"
-msgid "Email %1"
-msgstr "Skicka e-post till %1"
 
 #: widgets/mergedialog.cpp:65
 msgid "Duplicates Manager"
@@ -39,7 +29,12 @@ msgstr "Hantering av dubbletter"
 msgid "Select contacts to be merged"
 msgstr "Välj kontakter att sammanfoga"
 
-#: widgets/plugins/emaildetailswidget.cpp:38
+#. i18n: ectx: property (text), widget (QLabel, avatarPixmapLabel)
+#: widgets/person-details-presentation.ui:43
+msgid "Avatar"
+msgstr "Avatar"
+
+#: widgets/plugins/emaildetailswidget.cpp:50
 msgid "Email"
 msgstr "Skicka e-post"
 
@@ -54,3 +49,13 @@ msgstr "Sammanfoga med markerade kontakter"
 #: widgets/plugins/phonedetailswidget.cpp:40
 msgid "Phone"
 msgstr "Telefon"
+
+#~ msgid "Form"
+#~ msgstr "Formulär"
+
+#~ msgid "Unknown contact"
+#~ msgstr "Okänd kontakt"
+
+#~ msgctxt "%1 is a specific email address"
+#~ msgid "Email %1"
+#~ msgstr "Skicka e-post till %1"

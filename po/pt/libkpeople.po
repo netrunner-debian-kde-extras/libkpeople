@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkpeople\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-22 01:49+0000\n"
+"POT-Creation-Date: 2014-02-16 04:05+0000\n"
 "PO-Revision-Date: 2013-09-23 00:43+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -10,22 +10,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-POFile-SpellExtra: KPeople SweetPeople\n"
+"X-POFile-SpellExtra: KPeople SweetPeople Avatar\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#: contactitem.cpp:198
-msgid "Unknown contact"
-msgstr "Contacto desconhecido"
 
 #: examples/contactlistqml.cpp:29
 msgid "SweetPeople - KPeople Example"
 msgstr "SweetPeople - Exemplo do KPeople"
-
-#: plugins/core/emailplugin.cpp:40
-#, kde-format
-msgctxt "%1 is a specific email address"
-msgid "Email %1"
-msgstr "Enviar um e-mail a %1"
 
 #: widgets/mergedialog.cpp:65
 msgid "Duplicates Manager"
@@ -35,7 +25,12 @@ msgstr "Gestor de Duplicados"
 msgid "Select contacts to be merged"
 msgstr "Seleccionar os contactos a reunir"
 
-#: widgets/plugins/emaildetailswidget.cpp:38
+#. i18n: ectx: property (text), widget (QLabel, avatarPixmapLabel)
+#: widgets/person-details-presentation.ui:43
+msgid "Avatar"
+msgstr "Avatar"
+
+#: widgets/plugins/emaildetailswidget.cpp:50
 msgid "Email"
 msgstr "E-mail"
 
@@ -50,3 +45,13 @@ msgstr "Reunir com os Contactos Seleccionados"
 #: widgets/plugins/phonedetailswidget.cpp:40
 msgid "Phone"
 msgstr "Telefone"
+
+#~ msgid "Form"
+#~ msgstr "Formulário"
+
+#~ msgid "Unknown contact"
+#~ msgstr "Contacto desconhecido"
+
+#~ msgctxt "%1 is a specific email address"
+#~ msgid "Email %1"
+#~ msgstr "Enviar um e-mail a %1"

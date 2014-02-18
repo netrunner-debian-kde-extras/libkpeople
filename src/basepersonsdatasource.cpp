@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2013  Martin Klapetek <mklapetek@kde.org>
+    Copyright (C) 2013  David Edmundson <davidedmundson@kde.org>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -19,21 +20,60 @@
 
 #include "basepersonsdatasource.h"
 
+#include <QDebug>
+
+
+#include "defaultcontactmonitor_p.h"
+
 using namespace KPeople;
 
-BasePersonsDataSource::BasePersonsDataSource(QObject *parent)
-    : QObject(parent)
+class KPeople::BasePersonsDataSourcePrivate
 {
+public:
+    QWeakPointer<AllContactsMonitor> m_allContactsMonitor;
+    QHash<QString, QWeakPointer<ContactMonitor> > m_contactMonitors;
+};
+
+
+BasePersonsDataSource::BasePersonsDataSource(QObject *parent, const QVariantList &args)
+    : QObject(parent),
+      d_ptr(new BasePersonsDataSourcePrivate)
+{
+    Q_UNUSED(args)
 }
 
 BasePersonsDataSource::~BasePersonsDataSource()
 {
+    delete d_ptr;
 }
 
-QVariant BasePersonsDataSource::dataForContact(const QString &contactId, int role) const
+AllContactsMonitorPtr BasePersonsDataSource::allContactsMonitor()
 {
-    Q_UNUSED(contactId);
-    Q_UNUSED(role);
+    Q_D(BasePersonsDataSource);
 
-    return QVariant();
+    //if there is currently no watcher, create one
+    AllContactsMonitorPtr c;
+    if (!d->m_allContactsMonitor.toStrongRef()) {
+        c = AllContactsMonitorPtr(createAllContactsMonitor());
+        d->m_allContactsMonitor = c;
+    }
+
+    return d->m_allContactsMonitor.toStrongRef();
+}
+
+ContactMonitorPtr BasePersonsDataSource::contactMonitor(const QString& contactId)
+{
+    Q_D(BasePersonsDataSource);
+
+    ContactMonitorPtr c;
+    if (!d->m_contactMonitors[contactId].toStrongRef()) {
+        c = ContactMonitorPtr(createContactMonitor(contactId));
+        d->m_contactMonitors[contactId] = c;
+    }
+    return d->m_contactMonitors[contactId].toStrongRef();
+}
+
+ContactMonitor* BasePersonsDataSource::createContactMonitor(const QString &contactId)
+{
+    return new DefaultContactMonitor(contactId, allContactsMonitor());
 }
