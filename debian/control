@@ -31,10 +31,11 @@ Description: Library providing metacontacts infrastructure based on Nepomuk
  This library allows you to read meta data and initiate
  various actions for a contact.
 
-Package: libkpeople1-dbg
+Package: libkpeople3-dbg
 Section: debug
+Priority: extra
 Architecture: any
-Depends: libkpeople1 (= ${binary:Version}), ${misc:Depends}
+Depends: libkpeople3 (= ${binary:Version}), ${misc:Depends}
 Recommends: kdelibs5-dbg, nepomuk-core-dbg, libsoprano-dbg
 Description: debug symbols for package libkpeople
  kpeople runtime library debugging symbols

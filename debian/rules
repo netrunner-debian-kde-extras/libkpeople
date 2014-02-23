@@ -6,7 +6,7 @@ export DH_VERBOSE=1
 include /usr/share/dpkg/architecture.mk
 
 %:
-	dh $@ --with kde --dbg-package=libkpeople1-dbg --list-missing
+	dh $@ --with kde --dbg-package=libkpeople3-dbg --list-missing
 
 override_dh_auto_configure:
 	dh_auto_configure -- -DLIB_SUFFIX="/$(DEB_HOST_MULTIARCH)"
