@@ -1,6 +1,8 @@
-usr/lib/kde4/*.so
-usr/lib/kde4/imports/org/kde/people/*
-usr/lib/lib*.so.*
+usr/lib/kde4/akonadi_kpeople_plugin.so
+usr/lib/libkpeople.so.0.2*
+usr/lib/libkpeople.so.3
+usr/lib/libkpeoplewidgets.so.0.2*
+usr/lib/libkpeoplewidgets.so.3
 usr/share/kde4/apps/kpeople/dummy_avatar.png
 usr/share/kde4/services/*
 usr/share/kde4/servicetypes/*
