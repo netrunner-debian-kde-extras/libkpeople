@@ -8,7 +8,7 @@ Build-Depends: cmake,
                libtelepathy-qt4-dev,
                pkg-kde-tools (>= 0.9),
                shared-desktop-ontologies
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Section: libs
 Homepage: http://www.kde.org
 
