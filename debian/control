@@ -4,8 +4,8 @@ Maintainer: Diane Trout <diane@ghic.org>
 Build-Depends: cmake,
                debhelper (>= 9),
                kdelibs5-dev,
+               kdepimlibs5-dev,
                libtelepathy-qt4-dev,
-               nepomuk-core-dev,
                pkg-kde-tools (>= 0.9),
                shared-desktop-ontologies
 Standards-Version: 3.9.4
