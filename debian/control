@@ -15,13 +15,13 @@ Homepage: http://www.kde.org
 Package: libkpeople-dev
 Section: libdevel
 Architecture: any
-Depends: libkpeople1 (= ${binary:Version}), ${misc:Depends}
+Depends: libkpeople3 (= ${binary:Version}), kdepimlibs5-dev, ${misc:Depends}
 Description: development files for libkpeople
  Library providing metacontacts infrastructure based on Nepomuk
  .
  This package contains development files.
 
-Package: libkpeople1
+Package: libkpeople3
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Library providing metacontacts infrastructure based on Nepomuk
