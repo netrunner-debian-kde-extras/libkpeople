@@ -1,3 +1,5 @@
 usr/include/*
 usr/lib/lib*.so
-usr/share/kde4/apps/cmake/modules/FindKPeople.cmake
+usr/lib/cmake/KPeople/KPeopleConfig.cmake
+usr/lib/cmake/KPeople/KPeopleConfigVersion.cmake
+
