@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-16 04:05+0000\n"
+"POT-Creation-Date: 2014-02-18 01:50+0000\n"
 "PO-Revision-Date: 2014-02-04 21:37+0200\n"
 "Last-Translator: Antonis Geralis <gaantonio@civil.auth.gr>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr "Επιλέξτε επαφές για συγχώνευση"
 msgid "Avatar"
 msgstr ""
 
-#: widgets/plugins/emaildetailswidget.cpp:50
+#: widgets/plugins/emaildetailswidget.cpp:51
 msgid "Email"
 msgstr "Email"
 

@@ -1,7 +1,7 @@
 project (kpeople)
 
-option(ENABLE_EXAMPLES "Enable building of examples" ON)
-option(KDE4_BUILD_TESTS "Enable building of tests" ON)
+option(ENABLE_EXAMPLES "Enable building of examples" OFF)
+option(KDE4_BUILD_TESTS "Enable building of tests" OFF)
 
 set (CMAKE_MODULE_PATH
      "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules"
@@ -12,7 +12,7 @@ set (KDE_MIN_VERSION "4.10.1")
 
 set(KPEOPLE_VERSION_MAJOR 0)
 set(KPEOPLE_VERSION_MINOR 2)
-set(KPEOPLE_VERSION_PATCH 0)
+set(KPEOPLE_VERSION_PATCH 1)
 
 set(KPEOPLE_VERSION "${KPEOPLE_VERSION_MAJOR}.${KPEOPLE_VERSION_MINOR}.${KPEOPLE_VERSION_PATCH}")
 set(KPEOPLE_SOVERSION 3)
