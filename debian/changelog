@@ -1,6 +1,6 @@
 libkpeople (0.2.1-1) UNRELEASED; urgency=low
 
-  * Initial release
+  * Initial release (Closes: #744004)
     Based on ubuntu recipe
     http://bazaar.launchpad.net/~blue-shell/blue-shell/libkpeople-ubuntu
   * Include packaging improvements from ubuntu release by Rohan Garg.
