@@ -7,8 +7,7 @@ Build-Depends: cmake,
                kdepimlibs5-dev,
                libtelepathy-qt4-dev,
                libboost-dev,
-               pkg-kde-tools (>= 0.9),
-               shared-desktop-ontologies
+               pkg-kde-tools (>= 0.9)
 Standards-Version: 3.9.5
 Section: libs
 Homepage: http://www.kde.org
