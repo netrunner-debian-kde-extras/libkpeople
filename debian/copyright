@@ -95,6 +95,7 @@ License: LGPL-2+
 
 Files: debian/*
 Copyright: 2013 Rohan Garg <rohangarg@kubuntu.org>
+           2014 Diane Trout <diane@ghic.org>
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
