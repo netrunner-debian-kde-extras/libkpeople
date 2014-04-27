@@ -10,6 +10,8 @@ Build-Depends: cmake,
 Standards-Version: 3.9.5
 Section: libs
 Homepage: http://www.kde.org
+Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/libkpeople.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/libkpeople.git
 
 Package: libkpeople-dev
 Section: libdevel
