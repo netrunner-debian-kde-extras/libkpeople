@@ -1,4 +1,4 @@
-libkpeople (0.2.1-1) UNRELEASED; urgency=low
+libkpeople (0.2.2-1) UNRELEASED; urgency=low
 
   * Initial release (Closes: #744004)
     Based on ubuntu recipe
