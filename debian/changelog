@@ -6,5 +6,6 @@ libkpeople (0.2.2-1) UNRELEASED; urgency=medium
   * Include packaging improvements from ubuntu release by Rohan Garg.
   * Add library_startswith_soname.patch. This forces the library realname
     to start with the soname
+  * Add add-cmake-copying.patch to include license for cmake files.
 
  -- Diane Trout <diane@ghic.org>  Sun, 23 Feb 2014 15:59:15 -0800

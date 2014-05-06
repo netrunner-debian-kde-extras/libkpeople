@@ -1,1 +1,2 @@
+add-cmake-copying.patch
 library_startswith_soname.patch
