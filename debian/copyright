@@ -35,68 +35,23 @@ Copyright: 2013 David Edmundson <davidedmundson@kde.org>
            2012 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
 License: BSD-3-clause
 
-Files: po/cs/libkpeople.po
+Files: po/*
 Copyright: 2013 Vít Pelčák <vit@pelcak.org>
-License: LGPL-2.1+
-
-Files: po/da/libkpeople.po
-Copyright: 2013-2014 Martin Schlander <mschlander@opensuse.org>
-License: LGPL-2.1+
-
-Files: po/de/libkpeople.po
-Copyright: 2013 Burkhard Lück <lueck@hube-lueck.de>
-License: LGPL-2.1+
-
-Files: po/fi/libkpeople.po
-Copyright: 2014 Lasse Liehu <lasse.liehu@gmail.com>
-License: LGPL-2.1+
-
-Files: po/fr/libkpeople.po
-Copyright: 2013, 2014 Sebastien Renard <renard@kde.org>
-License: LGPL-2.1+
-
-Files: po/hu/libkpeople.po
-Copyright: 2013 Balázs Úr <urbalazs@gmail.com>
-License: LGPL-2.1+
-
-Files: po/nl/libkpeople.po
-Copyright: 2013 Freek de Kruijf <freekdekruijf@kde.nl>
-License: LGPL-2.1+
-
-Files: po/pl/libkpeople.po
-Copyright: 2014 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
-License: LGPL-2.1+
-
-Files: po/pt_BR/libkpeople.po
-Copyright: 2013 André Marcelo Alvarenga <alvarenga@kde.org>
-License: LGPL-2.1+
-
-Files: po/pt/libkpeople.po
-Copyright: 2013 José Nuno Coelho Pires <zepires@gmail.com>
-License: LGPL-2.1+
-
-Files: po/ro/libkpeople.po
-Copyright: 2014 Sergiu Bivol <sergiu@ase.md>
-License: LGPL-2.1+
-
-Files: po/ru/libkpeople.po
-Copyright: 2014 Alexander Potashev <aspotashev@gmail.com>
-License: LGPL-2.1+
-
-Files: po/sk/libkpeople.po
-Copyright: 2013 Roman Paholik <wizzardsk@gmail.com>
-License: LGPL-2.1+
-
-Files: po/sl/libkpeople.so
-Copyright: 2013, 2014 Andrej Mernik <andrejm@ubuntu.si>
-License: LGPL-2.1+
-
-Files: po/sv/libkpeople.po
-Copyright: 2013 Stefan Asserhäll <stefan.asserhall@comhem.se>
-License: LGPL-2.1+
-
-Files: po/uk/libkpeople.po
-Copyright: 2013 Yuri Chornoivan <yurchor@ukr.net>
+           2013-2014 Martin Schlander <mschlander@opensuse.org>
+           2013 Burkhard Lück <lueck@hube-lueck.de>
+           2014 Lasse Liehu <lasse.liehu@gmail.com>
+           2013-2014 Sebastien Renard <renard@kde.org>
+           2013 Balázs Úr <urbalazs@gmail.com>
+           2013 Freek de Kruijf <freekdekruijf@kde.nl>
+           2014 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+           2013 André Marcelo Alvarenga <alvarenga@kde.org>
+           2013 José Nuno Coelho Pires <zepires@gmail.com>
+           2014 Sergiu Bivol <sergiu@ase.md>
+           2014 Alexander Potashev <aspotashev@gmail.com>
+           2013 Roman Paholik <wizzardsk@gmail.com>
+           2013-2014 Andrej Mernik <andrejm@ubuntu.si>
+           2013 Stefan Asserhäll <stefan.asserhall@comhem.se>
+           2013 Yuri Chornoivan <yurchor@ukr.net>
 License: LGPL-2.1+
 
 License: LGPL-2.1+
