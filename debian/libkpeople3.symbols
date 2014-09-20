@@ -78,9 +78,7 @@ libkpeople.so.3 libkpeople3 #MINVER#
  _ZN7KPeople20AbstractPersonAction16staticMetaObjectE@Base 0.2.0
  _ZN7KPeople20AbstractPersonActionC1EP7QObject@Base 0.2.0
  _ZN7KPeople20AbstractPersonActionC2EP7QObject@Base 0.2.0
- _ZN7KPeople20AbstractPersonActionD0Ev@Base 0.2.0
- _ZN7KPeople20AbstractPersonActionD1Ev@Base 0.2.0
- _ZN7KPeople20AbstractPersonActionD2Ev@Base 0.2.0
+ (c++|optional=gccinternal")"non-virtual think to KPeople::AbstractPersonAction::~AbstractPersonAction()@Base" 0.2.0
  _ZN7KPeople20presenceSortPriorityERK7QString@Base 0.2.0
  _ZN7KPeople21BasePersonsDataSource11qt_metacallEN11QMetaObject4CallEiPPv@Base 0.2.0
  _ZN7KPeople21BasePersonsDataSource11qt_metacastEPKc@Base 0.2.0
