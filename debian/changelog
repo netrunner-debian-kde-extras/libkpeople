@@ -1,5 +1,6 @@
-libkpeople (0.2.2-3) UNRELEASED; urgency=medium
+libkpeople (0.3.0-1) UNRELEASED; urgency=medium
 
+  * New upstream release.
   * Remove nepomuk dependencies as we now use baloo.
   * Remove add-cmake-copying.patch, now provided upstream.
   * Remove library_startswith_soname.patch applied upstream.
