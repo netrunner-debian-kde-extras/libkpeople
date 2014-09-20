@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2013  David Edmundson <davidedmundson@kde.org>
+    Copyright 2014  Nilesh Suthar <nileshsuthar@live.in>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -16,24 +16,37 @@
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+#ifndef PERSON_EMAILS_VIEW_H
+#define PERSON_EMAILS_VIEW_H
 
-#ifndef AKONADIDATASOURCE_H
-#define AKONADIDATASOURCE_H
+#include <QWidget>
 
-#include <basepersonsdatasource.h>
+#include "../kpeople_export.h"
+#include "../persondata.h"
 
-#include <Akonadi/Monitor>
+class QLabel;
+class QVBoxLayout;
 
-class AkonadiDataSource : public KPeople::BasePersonsDataSource
+namespace KPeople {
+class PersonEmailsViewPrivate;
+
+class KPEOPLE_EXPORT PersonEmailsView : public QWidget
 {
+    Q_OBJECT
 public:
-    AkonadiDataSource(QObject *parent, const QVariantList &args = QVariantList());
-    virtual ~AkonadiDataSource();
-    virtual KPeople::AllContactsMonitor* createAllContactsMonitor();
-    virtual KPeople::ContactMonitor* createContactMonitor(const QString& contactId);
-    virtual QString sourcePluginId() const;
-private:
-    Akonadi::Monitor *m_monitor;
-};
+    PersonEmailsView(QWidget *parent = 0);
+    virtual ~PersonEmailsView();
 
-#endif // AKONADIDATASOURCE_H
+public Q_SLOTS:
+    void setPerson(PersonData *person);
+
+private Q_SLOTS:
+    void reload();
+
+private:
+    Q_DECLARE_PRIVATE(PersonEmailsView)
+    PersonEmailsViewPrivate *d_ptr;
+};
+}
+
+#endif // PERSON_EMAILS_VIEW_H

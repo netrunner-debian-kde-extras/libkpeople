@@ -14,6 +14,15 @@ set (kpeople_widgets_SRCS persondetailsdialog.cpp
 #     mergedelegate.cpp
 )
 
+if (${Baloo_FOUND})
+    set(kpeople_widgets_SRCS
+        ${kpeople_widgets_SRCS}
+        personemailview.cpp
+        plugins/emails.cpp
+        plugins/emaillistviewdelegate.cpp
+        plugins/emaillistmodel.cpp)
+endif()
+
 kde4_add_ui_files (kpeople_widgets_SRCS
                    person-details-presentation.ui
 )
@@ -25,10 +34,16 @@ target_link_libraries (kpeoplewidgets
                        ${QT_QTGUI_LIBRARIES}
                        ${KDE4_KDEUI_LIBS}
                        ${KDEPIMLIBS_KABC_LIBS}
+                       ${KDEPIMLIBS_KMIME_LIBS}
+                       ${KDEPIMLIBS_AKONADI_LIBS}
                        kpeople
 )
 
-set_target_properties (kpeoplewidgets PROPERTIES VERSION ${KPEOPLE_VERSION} SOVERSION ${KPEOPLE_SOVERSION})
+if (${Baloo_FOUND})
+    target_link_libraries(kpeoplewidgets ${BALOO_LIBRARIES})
+endif()
+
+set_target_properties (kpeoplewidgets PROPERTIES VERSION ${KPEOPLE_LIBVERSION} SOVERSION ${KPEOPLE_SOVERSION})
 
 if (MSVC)
     set_target_properties (kpeoplewidgets PROPERTIES
@@ -47,6 +62,7 @@ install (FILES
             persondetailsview.h
 #             mergedialog.h
             persondetailsdialog.h
+            personemailview.h
          DESTINATION ${INCLUDE_INSTALL_DIR}/kpeople/widgets
          COMPONENT Devel
 )

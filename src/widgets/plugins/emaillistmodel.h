@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2013  David Edmundson <davidedmundson@kde.org>
+    Copyright 2014  Nilesh Suthar <nileshsuthar@live.in>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -16,24 +16,42 @@
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+#ifndef EMAILLISTMODEL_H
+#define EMAILLISTMODEL_H
 
-#ifndef AKONADIDATASOURCE_H
-#define AKONADIDATASOURCE_H
+#include <QAbstractListModel>
+#include <QUrl>
+#include <KDateTime>
 
-#include <basepersonsdatasource.h>
-
-#include <Akonadi/Monitor>
-
-class AkonadiDataSource : public KPeople::BasePersonsDataSource
-{
-public:
-    AkonadiDataSource(QObject *parent, const QVariantList &args = QVariantList());
-    virtual ~AkonadiDataSource();
-    virtual KPeople::AllContactsMonitor* createAllContactsMonitor();
-    virtual KPeople::ContactMonitor* createContactMonitor(const QString& contactId);
-    virtual QString sourcePluginId() const;
-private:
-    Akonadi::Monitor *m_monitor;
+struct EmailItem {
+    QString subject;
+    QString body;
+    KDateTime date;
+    QUrl url;
 };
 
-#endif // AKONADIDATASOURCE_H
+class EmailListModel : public QAbstractListModel
+{
+    Q_OBJECT
+
+public:
+    enum DataRole {
+        SubjectRole = Qt::UserRole + 100,
+        BodyRole,
+        TimeRole
+    };
+
+    EmailListModel(QObject *parent = 0);
+
+    virtual QVariant data(const QModelIndex &index, int role) const;
+    virtual int rowCount(const QModelIndex &parent) const;
+
+    void addEmail(const EmailItem &mail);
+    QUrl getItemUrl(int row);
+
+private:
+    QList<EmailItem> emailList;
+
+};
+
+#endif // EMAILLISTMODEL_H

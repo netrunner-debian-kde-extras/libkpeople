@@ -1,14 +1,15 @@
-# Ukrainian translation of libkpeople
-# Copyright (C) 2013 libkpeople developers
-# This file is distributed under the same license as the libkpeople package.
+# Translation of libkpeople.po to Ukrainian
+# Copyright (C) 2013-2014 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
 #
 # Yuri Chornoivan <yurchor@ukr.net>, 2013, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: libkpeople\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-18 01:50+0000\n"
-"PO-Revision-Date: 2014-02-15 09:09+0200\n"
+"POT-Creation-Date: 2014-08-19 02:05+0000\n"
+"PO-Revision-Date: 2014-08-19 08:35+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -39,6 +40,22 @@ msgstr "Аватар"
 #: widgets/plugins/emaildetailswidget.cpp:51
 msgid "Email"
 msgstr "Електронна пошта"
+
+#: widgets/plugins/emaillistmodel.cpp:47
+msgid "No Subject"
+msgstr "Без теми"
+
+#: widgets/plugins/emaillistviewdelegate.cpp:57
+msgid "Subject: "
+msgstr "Тема: "
+
+#: widgets/plugins/emails.cpp:83
+msgid "No Emails"
+msgstr "Немає повідомлень"
+
+#: widgets/plugins/emails.cpp:126
+msgid "Mails"
+msgstr "Пошта"
 
 #: widgets/plugins/mergecontactswidget.cpp:51
 msgid "Show Merge Suggestions..."

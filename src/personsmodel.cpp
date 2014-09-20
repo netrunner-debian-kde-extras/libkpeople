@@ -28,6 +28,9 @@ public:
     QList<AllContactsMonitorPtr> m_sourceMonitors;
 
     int initialFetchesDoneCount;
+
+    bool isInitialized;
+    bool hasError;
 };
 }
 
@@ -41,13 +44,16 @@ PersonsModel::PersonsModel(QObject *parent):
 
     d->genericAvatarImagePath = KStandardDirs::locate("data", "kpeople/dummy_avatar.png");
     d->initialFetchesDoneCount = 0;
+    d->isInitialized = false;
+    d->hasError = false;
+
     Q_FOREACH (BasePersonsDataSource* dataSource, PersonPluginManager::dataSourcePlugins()) {
         const AllContactsMonitorPtr monitor = dataSource->allContactsMonitor();
-        if (monitor.data()->isInitialFetchComplete()) {
-            QTimer::singleShot(0, this, SLOT(onMonitorInitialFetchComplete()));
+        if (monitor->isInitialFetchComplete()) {
+            QTimer::singleShot(0, this, SLOT(onMonitorInitialFetchComplete(monitor->initialFetchSucccess())));
         } else {
-            connect(monitor.data(), SIGNAL(initialFetchComplete()),
-                    this, SLOT(onMonitorInitialFetchComplete()));
+            connect(monitor.data(), SIGNAL(initialFetchComplete(bool)),
+                    this, SLOT(onMonitorInitialFetchComplete(bool)));
         }
         d->m_sourceMonitors << monitor;
     }
@@ -104,9 +110,9 @@ QVariant PersonsModel::dataForAddressee(const QString &personId, const KABC::Add
         if (!person.photo().data().isNull()) {
             return person.photo().data();
         } else if (!person.photo().url().isEmpty()) {
-            return QImage(person.photo().url());
+            return QPixmap(person.photo().url());
         } else {
-            return QImage(d->genericAvatarImagePath);
+            return QPixmap(d->genericAvatarImagePath);
         }
     case PersonIdRole:
         return personId;
@@ -142,6 +148,13 @@ int PersonsModel::rowCount(const QModelIndex &parent) const
     return 0;
 }
 
+bool PersonsModel::isInitialized() const
+{
+    Q_D(const PersonsModel);
+
+    return d->isInitialized;
+}
+
 QModelIndex PersonsModel::index(int row, int column, const QModelIndex &parent) const
 {
     if (row < 0 || column < 0 || row >= rowCount(parent)) {
@@ -164,14 +177,18 @@ QModelIndex PersonsModel::parent(const QModelIndex &childIndex) const
     return index(childIndex.internalId(), 0, QModelIndex());
 }
 
-void PersonsModel::onMonitorInitialFetchComplete()
+void PersonsModel::onMonitorInitialFetchComplete(bool success)
 {
     Q_D(PersonsModel);
 
     d->initialFetchesDoneCount++;
+    if (!success) {
+        d->hasError = true;
+    }
     Q_ASSERT(d->initialFetchesDoneCount <= d->m_sourceMonitors.count());
     if (d->initialFetchesDoneCount == d->m_sourceMonitors.count()) {
-        Q_EMIT modelInitialized();
+        d->isInitialized = true;
+        Q_EMIT modelInitialized(!d->hasError);
     }
 }
 

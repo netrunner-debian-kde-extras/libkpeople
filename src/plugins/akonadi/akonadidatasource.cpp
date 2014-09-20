@@ -1,23 +1,20 @@
 /*
- * Copyright 2013  David Edmundson <davidedmundson@kde.org>
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License or (at your option) version 3 or any later version
- * accepted by the membership of KDE e.V. (or its successor approved
- * by the membership of KDE e.V.), which shall act as a proxy
- * defined in Section 14 of version 3 of the license.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- */
+    Copyright (C) 2013  David Edmundson <davidedmundson@kde.org>
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 2.1 of the License, or (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this library; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+*/
 
 #include "akonadidatasource.h"
 
@@ -56,11 +53,13 @@ private:
     Akonadi::Monitor *m_monitor;
     KABC::Addressee::Map m_contacts;
     int m_activeFetchJobsCount;
+    bool m_fetchError;
 };
 
 AkonadiAllContacts::AkonadiAllContacts():
     m_monitor(new Akonadi::Monitor(this)),
-    m_activeFetchJobsCount(0)
+    m_activeFetchJobsCount(0),
+    m_fetchError(false)
 {
     connect(Akonadi::ServerManager::self(), SIGNAL(stateChanged(Akonadi::ServerManager::State)), SLOT(onServerStateChanged(Akonadi::ServerManager::State)));
     onServerStateChanged(Akonadi::ServerManager::state());
@@ -131,35 +130,48 @@ void AkonadiAllContacts::onItemRemoved(const Item& item)
 //or we could add items as we go along...
 void AkonadiAllContacts::onItemsFetched(KJob *job)
 {
-    ItemFetchJob *itemFetchJob = qobject_cast<ItemFetchJob*>(job);
-    foreach (const Item &item, itemFetchJob->items()) {
-        onItemAdded(item);
+    if (job->error()) {
+        kWarning() << job->errorString();
+        m_fetchError = true;
+    } else {
+        ItemFetchJob *itemFetchJob = qobject_cast<ItemFetchJob*>(job);
+        foreach (const Item &item, itemFetchJob->items()) {
+            onItemAdded(item);
+        }
     }
 
     if (--m_activeFetchJobsCount == 0 && !isInitialFetchComplete()) {
-        emitInitialFetchComplete();
+        emitInitialFetchComplete(true);
     }
 }
 
 void AkonadiAllContacts::onCollectionsFetched(KJob* job)
 {
-    CollectionFetchJob *fetchJob = qobject_cast<CollectionFetchJob*>(job);
-    QList<Collection> contactCollections;
-    foreach (const Collection &collection, fetchJob->collections()) {
-        // Skip virtual collections - we will get contacts linked into virtual
-        // collections from their real parent collections
-        if (collection.isVirtual()) {
-            continue;
+    if (job->error()) {
+        kWarning() << job->errorString();
+        emitInitialFetchComplete(false);
+    } else {
+        CollectionFetchJob *fetchJob = qobject_cast<CollectionFetchJob*>(job);
+        QList<Collection> contactCollections;
+        foreach (const Collection &collection, fetchJob->collections()) {
+            // Skip virtual collections - we will get contacts linked into virtual
+            // collections from their real parent collections
+            if (collection.isVirtual()) {
+                continue;
+            }
+            if (collection.contentMimeTypes().contains( KABC::Addressee::mimeType() ) ) {
+                ItemFetchJob *itemFetchJob = new ItemFetchJob(collection);
+                itemFetchJob->fetchScope().fetchFullPayload();
+                connect(itemFetchJob, SIGNAL(finished(KJob*)), SLOT(onItemsFetched(KJob*)));
+                ++m_activeFetchJobsCount;
+            }
         }
-        if (collection.contentMimeTypes().contains( KABC::Addressee::mimeType() ) ) {
-            ItemFetchJob *itemFetchJob = new ItemFetchJob(collection);
-            itemFetchJob->fetchScope().fetchFullPayload();
-            connect(itemFetchJob, SIGNAL(finished(KJob*)), SLOT(onItemsFetched(KJob*)));
-            ++m_activeFetchJobsCount;
+        if (m_activeFetchJobsCount == 0) {
+            emitInitialFetchComplete(true);
         }
     }
     if (m_activeFetchJobsCount == 0 && !isInitialFetchComplete()) {
-        emitInitialFetchComplete();
+        emitInitialFetchComplete(true);
 
     }
 }
@@ -168,7 +180,7 @@ void AkonadiAllContacts::onServerStateChanged(ServerManager::State state)
 {
     //if we're broken tell kpeople we've loaded so kpeople doesn't block
     if(state == Akonadi::ServerManager::Broken && !isInitialFetchComplete()) {
-        emitInitialFetchComplete();
+        emitInitialFetchComplete(false);
         qWarning() << "Akonadi failed to load, some metacontact features may not be available";
         qWarning() << "For more information please load akonadi_console" ;
     }

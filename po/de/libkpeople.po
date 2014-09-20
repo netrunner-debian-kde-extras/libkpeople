@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-18 01:50+0000\n"
-"PO-Revision-Date: 2014-02-15 10:53+0100\n"
+"POT-Creation-Date: 2014-08-19 02:05+0000\n"
+"PO-Revision-Date: 2014-09-03 07:31+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -37,6 +37,22 @@ msgstr "Avatar"
 #: widgets/plugins/emaildetailswidget.cpp:51
 msgid "Email"
 msgstr "E-Mail"
+
+#: widgets/plugins/emaillistmodel.cpp:47
+msgid "No Subject"
+msgstr "Kein Betreff"
+
+#: widgets/plugins/emaillistviewdelegate.cpp:57
+msgid "Subject: "
+msgstr "Betreff: "
+
+#: widgets/plugins/emails.cpp:83
+msgid "No Emails"
+msgstr "Keine E-Mails"
+
+#: widgets/plugins/emails.cpp:126
+msgid "Mails"
+msgstr "E-Mails"
 
 #: widgets/plugins/mergecontactswidget.cpp:51
 msgid "Show Merge Suggestions..."
