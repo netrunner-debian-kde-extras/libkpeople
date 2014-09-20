@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkpeople\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-18 01:50+0000\n"
-"PO-Revision-Date: 2014-02-15 10:40-0200\n"
+"POT-Creation-Date: 2014-08-19 02:05+0000\n"
+"PO-Revision-Date: 2014-08-19 08:07-0300\n"
 "Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
 "Language: pt_BR\n"
@@ -39,6 +39,22 @@ msgstr "Imagem"
 msgid "Email"
 msgstr "E-mail"
 
+#: widgets/plugins/emaillistmodel.cpp:47
+msgid "No Subject"
+msgstr "Sem assunto"
+
+#: widgets/plugins/emaillistviewdelegate.cpp:57
+msgid "Subject: "
+msgstr "Assunto: "
+
+#: widgets/plugins/emails.cpp:83
+msgid "No Emails"
+msgstr "Sem e-mails"
+
+#: widgets/plugins/emails.cpp:126
+msgid "Mails"
+msgstr "Mensagens"
+
 #: widgets/plugins/mergecontactswidget.cpp:51
 msgid "Show Merge Suggestions..."
 msgstr "Mostrar sugestões de mesclagem..."
@@ -50,6 +66,3 @@ msgstr "Mesclar os contatos selecionados"
 #: widgets/plugins/phonedetailswidget.cpp:40
 msgid "Phone"
 msgstr "Telefone"
-
-#~ msgid "Form"
-#~ msgstr "Formulário"

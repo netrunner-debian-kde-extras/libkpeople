@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2013.
+# Vít Pelčák <vit@pelcak.org>, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-18 01:50+0000\n"
-"PO-Revision-Date: 2013-09-26 15:18+0200\n"
+"POT-Creation-Date: 2014-08-19 02:05+0000\n"
+"PO-Revision-Date: 2014-08-19 10:41+0200\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,35 +16,53 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.5\n"
+"X-Language: cs_CZ\n"
+"X-Source-Language: en_US\n"
 
 #: examples/contactlistqml.cpp:29
 msgid "SweetPeople - KPeople Example"
-msgstr ""
+msgstr "SweetPeople - KPeople Example"
 
 #: widgets/mergedialog.cpp:65
 msgid "Duplicates Manager"
-msgstr ""
+msgstr "Správce duplikátů"
 
 #: widgets/mergedialog.cpp:74
 msgid "Select contacts to be merged"
-msgstr ""
+msgstr "Zvolte kontakty ke sloučení"
 
 #. i18n: ectx: property (text), widget (QLabel, avatarPixmapLabel)
 #: widgets/person-details-presentation.ui:43
 msgid "Avatar"
-msgstr ""
+msgstr "Avatar"
 
 #: widgets/plugins/emaildetailswidget.cpp:51
 msgid "Email"
 msgstr "E-mail"
 
+#: widgets/plugins/emaillistmodel.cpp:47
+msgid "No Subject"
+msgstr "Žádný předmět"
+
+#: widgets/plugins/emaillistviewdelegate.cpp:57
+msgid "Subject: "
+msgstr "Předmět: "
+
+#: widgets/plugins/emails.cpp:83
+msgid "No Emails"
+msgstr "Žádné e-maily"
+
+#: widgets/plugins/emails.cpp:126
+msgid "Mails"
+msgstr "E-maily"
+
 #: widgets/plugins/mergecontactswidget.cpp:51
 msgid "Show Merge Suggestions..."
-msgstr ""
+msgstr "Zobrazit návrhy sloučení..."
 
 #: widgets/plugins/mergecontactswidget.cpp:89
 msgid "Merge with Selected Contacts"
-msgstr ""
+msgstr "Sloučit s vybranými kontakty"
 
 #: widgets/plugins/phonedetailswidget.cpp:40
 msgid "Phone"

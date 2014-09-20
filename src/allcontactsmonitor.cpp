@@ -30,11 +30,13 @@ class KPeople::AllContactsMonitorPrivate
 {
   public:
     AllContactsMonitorPrivate():
-        m_initialFetchDone(false)
+        m_initialFetchDone(false),
+        m_initialFetchSucccess(false)
     {
     }
 
     bool m_initialFetchDone;
+    bool m_initialFetchSucccess;
 };
 
 AllContactsMonitor::AllContactsMonitor():
@@ -58,10 +60,16 @@ bool AllContactsMonitor::isInitialFetchComplete() const
     return d_ptr->m_initialFetchDone;
 }
 
-void AllContactsMonitor::emitInitialFetchComplete()
+bool AllContactsMonitor::initialFetchSuccess() const
+{
+    return d_ptr->m_initialFetchSucccess;
+}
+
+void AllContactsMonitor::emitInitialFetchComplete(bool success)
 {
     d_ptr->m_initialFetchDone = true;
-    Q_EMIT initialFetchComplete();
+    d_ptr->m_initialFetchSucccess = success;
+    Q_EMIT initialFetchComplete(success);
 }
 
 

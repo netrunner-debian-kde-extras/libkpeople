@@ -70,8 +70,10 @@ public:
     virtual QModelIndex parent(const QModelIndex &index) const;
     virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
 
+    bool isInitialized() const;
+
 Q_SIGNALS:
-    void modelInitialized();
+    void modelInitialized(bool success);
 
 private Q_SLOTS:
     void onContactsFetched();
@@ -85,7 +87,7 @@ private Q_SLOTS:
     void onAddContactToPerson(const QString &contactId, const QString &newPersonId);
     void onRemoveContactsFromPerson(const QString &contactId);
 
-    void onMonitorInitialFetchComplete();
+    void onMonitorInitialFetchComplete(bool success = true);
 
 private:
     Q_DISABLE_COPY(PersonsModel)

@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2013  David Edmundson <davidedmundson@kde.org>
+    Copyright 2014  Nilesh Suthar <nileshsuthar@live.in>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -16,24 +16,17 @@
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+#ifndef EMAILLISTVIEWDELEGATE_H
+#define EMAILLISTVIEWDELEGATE_H
 
-#ifndef AKONADIDATASOURCE_H
-#define AKONADIDATASOURCE_H
+#include "emaillistmodel.h"
+#include <QStyledItemDelegate>
 
-#include <basepersonsdatasource.h>
-
-#include <Akonadi/Monitor>
-
-class AkonadiDataSource : public KPeople::BasePersonsDataSource
+class EmailListViewDelegate : public QStyledItemDelegate
 {
-public:
-    AkonadiDataSource(QObject *parent, const QVariantList &args = QVariantList());
-    virtual ~AkonadiDataSource();
-    virtual KPeople::AllContactsMonitor* createAllContactsMonitor();
-    virtual KPeople::ContactMonitor* createContactMonitor(const QString& contactId);
-    virtual QString sourcePluginId() const;
-private:
-    Akonadi::Monitor *m_monitor;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    void paint(QPainter *painter, const QStyleOptionViewItem &option,
+               const QModelIndex &index) const;
 };
 
-#endif // AKONADIDATASOURCE_H
+#endif // EMAILLISTVIEWDELEGATE_H
