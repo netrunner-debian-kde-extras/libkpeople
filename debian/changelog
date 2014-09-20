@@ -3,6 +3,7 @@ libkpeople (0.2.2-3) UNRELEASED; urgency=medium
   * Remove nepomuk dependencies as we now use baloo.
   * Remove add-cmake-copying.patch, now provided upstream.
   * Remove library_startswith_soname.patch applied upstream.
+  * Rename libkpeople3 to libkpeople4 to match SONAME
 
  -- Diane Trout <diane@ghic.org>  Sat, 20 Sep 2014 10:58:21 -0700
 
