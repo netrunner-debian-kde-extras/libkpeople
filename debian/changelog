@@ -1,3 +1,9 @@
+libkpeople (0.2.2-3) UNRELEASED; urgency=medium
+
+  * Remove nepomuk dependencies as we now use baloo.
+
+ -- Diane Trout <diane@ghic.org>  Sat, 20 Sep 2014 10:58:21 -0700
+
 libkpeople (0.2.2-2) unstable; urgency=medium
 
   * Update symbols file for possibly missing destructor (Closes: #753186)
