@@ -6,6 +6,10 @@ libkpeople (0.3.0-1) UNRELEASED; urgency=medium
   * Remove library_startswith_soname.patch applied upstream.
   * Rename libkpeople3 to libkpeople4 to match SONAME
   * Update libkpeople4 symbols file for 0.3.0
+  * Split desktop files out from the libkpeople library
+    into libkpeople-data.
+    - hopefully this means fewer breaks/replaces in the future.
+  * Add Breaks/Replaces to remove libkpeople3
 
  -- Diane Trout <diane@ghic.org>  Sat, 20 Sep 2014 10:58:21 -0700
 

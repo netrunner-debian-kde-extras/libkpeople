@@ -25,13 +25,25 @@ Description: development files for libkpeople
 
 Package: libkpeople4
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: libkpeople-data (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: Library providing access to and grouping for KDE contacts
  libkpeople allow grouping multiple accounts into a
  single identity.
  .
  This library allows you to read metadata and initiate
  various actions for a contact.
+
+Package: libkpeople-data
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: libkpeople3 (<< 0.3.0~)
+Replaces: libkpeople3 (<< 0.3.0~)
+Description: Support files for used by libkpeople
+ libkpeople allow grouping multiple accounts into a
+ single identity.
+ .
+ This package contains plugins and service files to
+ integrage kpeople support.
 
 Package: libkpeople4-dbg
 Section: debug
