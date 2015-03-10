@@ -10,6 +10,7 @@ libkpeople (0.3.0-1) UNRELEASED; urgency=medium
     into libkpeople-data.
     - hopefully this means fewer breaks/replaces in the future.
   * Add Breaks/Replaces to remove libkpeople3
+  * Update Standards-Version to 3.9.6.0. No changes needed.
 
  -- Diane Trout <diane@ghic.org>  Sat, 20 Sep 2014 10:58:21 -0700
 
