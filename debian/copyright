@@ -26,10 +26,6 @@ Copyright: 2013 David Edmundson <davidedmundson@kde.org>
            2013 Martin Klapetek <mklapetek@kde.org>
 License: GPL-2+kdeev
 
-Files: autotests/lib/nepomuktest_export.h
-Copyright: 2007 David Faure <faure@kde.org>
-License: LGPL-2+
-
 Files: cmake/*
 Copyright: 2013 David Edmundson <davidedmundson@kde.org>
            2012 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
