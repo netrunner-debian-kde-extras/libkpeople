@@ -16,7 +16,10 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/libkpeople.g
 Package: libkpeople-dev
 Section: libdevel
 Architecture: any
-Depends: libkpeople4 (= ${binary:Version}), kdepimlibs5-dev, ${misc:Depends}
+Depends: libkpeople4 (= ${binary:Version}),
+ libkpeoplewidgets4 (= ${binary:Version}),
+ kdepimlibs5-dev,
+ ${misc:Depends}
 Description: development files for libkpeople
  libkpeople allows grouping multiple accounts into a
  single identity.
@@ -32,6 +35,16 @@ Description: Library providing access to and grouping for KDE contacts
  .
  This library allows you to read metadata and initiate
  various actions for a contact.
+
+Package: libkpeoplewidgets4
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Library providing widgets to access and group KDE contacts
+ libkpeople allow grouping multiple accounts into a
+ single identity.
+ .
+ This library provides widgets to help manage contacts using
+ the kpeople models.
 
 Package: libkpeople-data
 Architecture: any

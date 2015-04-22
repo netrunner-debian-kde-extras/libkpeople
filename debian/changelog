@@ -6,6 +6,8 @@ libkpeople (0.3.0-1) UNRELEASED; urgency=medium
   * Remove library_startswith_soname.patch applied upstream.
   * Rename libkpeople3 to libkpeople4 to match SONAME
   * Update libkpeople4 symbols file for 0.3.0
+  * Split libkpeoplewidgets4 out from libkpeople and add a symbols
+    file for it.
   * Split desktop files out from the libkpeople library
     into libkpeople-data.
     - hopefully this means fewer breaks/replaces in the future.
