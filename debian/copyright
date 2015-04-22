@@ -2,11 +2,6 @@ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: libkpeople
 Source: git://anongit.kde.org/libkpeople.git
 
-Files: debian/*
-Copyright: 2013 Rohan Garg <rohangarg@kubuntu.org>
-           2014 Diane Trout <diane@ghic.org>
-License: GPL-2+
-
 Files: *
 Copyright: 2013 David Edmundson <david@davidedmundson.co.uk>
 	   2013 Franck Arrecot <franck.arrecot@gmail.com>
@@ -49,6 +44,11 @@ Copyright: 2013 Vít Pelčák <vit@pelcak.org>
            2013 Stefan Asserhäll <stefan.asserhall@bredband.net>
            2013 Yuri Chornoivan <yurchor@ukr.net>
 License: LGPL-2.1+
+
+Files: debian/*
+Copyright: 2013 Rohan Garg <rohangarg@kubuntu.org>
+           2014 Diane Trout <diane@ghic.org>
+License: GPL-2+
 
 License: LGPL-2.1+
  This library is free software; you can redistribute it and/or
