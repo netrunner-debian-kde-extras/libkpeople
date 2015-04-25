@@ -12,6 +12,7 @@ libkpeople (0.3.0-1) UNRELEASED; urgency=medium
     into libkpeople-data.
     - hopefully this means fewer breaks/replaces in the future.
   * Add Breaks/Replaces to remove libkpeople3
+  * Move akonadi_kpeople_plugin to libkpeople-plugins
   * Update Standards-Version to 3.9.6.0. No changes needed.
   * Remove autotests/lib/nepomuktest_export.h block from copyright file
     as upstream dropped nepomuk support.

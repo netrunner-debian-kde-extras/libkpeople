@@ -28,7 +28,9 @@ Description: development files for libkpeople
 
 Package: libkpeople4
 Architecture: any
-Depends: libkpeople-data (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Depends: libkpeople-data (= ${source:Version}),
+  ${misc:Depends},
+  ${shlibs:Depends}
 Description: Library providing access to and grouping for KDE contacts
  libkpeople allow grouping multiple accounts into a
  single identity.
@@ -46,8 +48,19 @@ Description: Library providing widgets to access and group KDE contacts
  This library provides widgets to help manage contacts using
  the kpeople models.
 
-Package: libkpeople-data
+Package: libkpeople-plugins
 Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: libkpeople3 (<< 0.3.0~)
+Replaces: libkpeople3 (<< 0.3.0~)
+Description: KPeople plugins for other compontents of KDE
+ libkpeople allow grouping multiple accounts into a
+ single identity.
+ .
+ This library provides a plugin for akonadi.
+
+Package: libkpeople-data
+Architecture: all
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Breaks: libkpeople3 (<< 0.3.0~)
 Replaces: libkpeople3 (<< 0.3.0~)
