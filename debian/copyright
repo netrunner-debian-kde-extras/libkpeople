@@ -8,15 +8,10 @@ Copyright: 2013 David Edmundson <david@davidedmundson.co.uk>
 	   2011-2013 Martin Klapetek <mklapetek@kde.org>
 	   2012 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
 	   2010-12 Vishesh Handa <me@vhanda.in>
+	   2014 Nilesh Suthar <nileshsuthar@live.in>
 License: LGPL-2.1+
 
 Files: src/allcontactsmonitor.*
-       src/contactmonitor.*
-       src/defaultcontactmonitor*
-       src/global.*
-       src/metacontact*
-       src/personmanager*
-       src/plugins/akonadi/akonadidatasource.*
 Copyright: 2013 David Edmundson <davidedmundson@kde.org>
            2013 Martin Klapetek <mklapetek@kde.org>
 License: GPL-2+kdeev
@@ -27,7 +22,7 @@ Copyright: 2013 David Edmundson <davidedmundson@kde.org>
 License: BSD-3-clause
 
 Files: po/*
-Copyright: 2013 Vít Pelčák <vit@pelcak.org>
+Copyright: 2013-2014 Vít Pelčák <vit@pelcak.org>
            2013-2014 Martin Schlander <mschlander@opensuse.org>
            2013 Burkhard Lück <lueck@hube-lueck.de>
            2014 Lasse Liehu <lasse.liehu@gmail.com>
@@ -42,7 +37,8 @@ Copyright: 2013 Vít Pelčák <vit@pelcak.org>
            2013 Roman Paholik <wizzardsk@gmail.com>
            2013-2014 Andrej Mernik <andrejm@ubuntu.si>
            2013 Stefan Asserhäll <stefan.asserhall@bredband.net>
-           2013 Yuri Chornoivan <yurchor@ukr.net>
+           2013-2014 Yuri Chornoivan <yurchor@ukr.net>
+	   2014 Antonis Geralis <gaantonio@civil.auth.gr>
 License: LGPL-2.1+
 
 Files: debian/*
