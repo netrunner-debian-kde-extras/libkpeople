@@ -1,2 +1,2 @@
 version=3
-ftp://ftp.kde.org/pub/kde/unstable/libkpeople/([0-9.]+)/src/libkpeople-([0-9.]+).tar.bz2
+http://download.kde.org/unstable/libkpeople/([0-9.]+)/src/libkpeople-([0-9.]+).tar.bz2

@@ -15,6 +15,7 @@ libkpeople (0.3.0-1) UNRELEASED; urgency=medium
   * Move akonadi_kpeople_plugin to libkpeople-plugins
   * Update Standards-Version to 3.9.6.0. No changes needed.
   * Update copyright file.
+  * Update debian/watch file to use http://download.kde.org
 
  -- Diane Trout <diane@ghic.org>  Sat, 20 Sep 2014 10:58:21 -0700
 
