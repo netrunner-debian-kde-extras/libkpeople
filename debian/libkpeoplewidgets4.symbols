@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 0.3.0 amd64
+# SymbolsHelper-Confirmed: 0.3.0 amd64 armel armhf hurd-i386 i386 mips mipsel powerpc sparc
 libkpeoplewidgets.so.4 libkpeoplewidgets4 #MINVER#
  _ZN7KPeople17PersonDetailsView11qt_metacallEN11QMetaObject4CallEiPPv@Base 0.3.0
  _ZN7KPeople17PersonDetailsView11qt_metacastEPKc@Base 0.3.0
@@ -39,7 +39,5 @@ libkpeoplewidgets.so.4 libkpeoplewidgets4 #MINVER#
  _ZTVN7KPeople17PersonDetailsViewE@Base 0.3.0
  _ZTVN7KPeople19PersonDetailsDialogE@Base 0.3.0
  _ZTVN7KPeople26AbstractFieldWidgetFactoryE@Base 0.3.0
- _ZThn16_N7KPeople17PersonDetailsViewD0Ev@Base 0.3.0
- _ZThn16_N7KPeople17PersonDetailsViewD1Ev@Base 0.3.0
- _ZThn16_N7KPeople19PersonDetailsDialogD0Ev@Base 0.3.0
- _ZThn16_N7KPeople19PersonDetailsDialogD1Ev@Base 0.3.0
+ (c++|arch=!i386 !mips !powerpc !sparc)"non-virtual thunk to KPeople::PersonDetailsDialog::~PersonDetailsDialog()@Base" 0.3.0
+ (c++|arch=amd64 armhf sparc)"non-virtual thunk to KPeople::PersonDetailsView::~PersonDetailsView()@Base" 0.3.0

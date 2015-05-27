@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 0.3.0 amd64
+# SymbolsHelper-Confirmed: 0.3.0 amd64 arm64 armel armhf i386 mips mipsel powerpc ppc64el s390x sparc
 libkpeople.so.4 libkpeople4 #MINVER#
  _ZN13PersonManager11qt_metacallEN11QMetaObject4CallEiPPv@Base 0.2.0
  _ZN13PersonManager11qt_metacastEPKc@Base 0.2.0
@@ -29,7 +29,7 @@ libkpeople.so.4 libkpeople4 #MINVER#
  _ZN7KPeople12PersonsModel13personChangedERK7QString@Base 0.2.0
  _ZN7KPeople12PersonsModel14onContactAddedERK7QStringRKN4KABC9AddresseeE@Base 0.2.0
  _ZN7KPeople12PersonsModel16modelInitializedEb@Base 0.3.0
- (c++|optional=gccinternal")_ZN7KPeople12PersonsModel16modelInitializedEv@Base 0.2.0
+ (c++|optional=gccinternal|arch=amd64)_ZN7KPeople12PersonsModel16modelInitializedEv@Base 0.2.0
  _ZN7KPeople12PersonsModel16onContactChangedERK7QStringRKN4KABC9AddresseeE@Base 0.2.0
  _ZN7KPeople12PersonsModel16onContactRemovedERK7QString@Base 0.2.0
  _ZN7KPeople12PersonsModel16staticMetaObjectE@Base 0.2.0
@@ -37,7 +37,7 @@ libkpeople.so.4 libkpeople4 #MINVER#
  _ZN7KPeople12PersonsModel20onAddContactToPersonERK7QStringS3_@Base 0.2.0
  _ZN7KPeople12PersonsModel26onRemoveContactsFromPersonERK7QString@Base 0.2.0
  _ZN7KPeople12PersonsModel29onMonitorInitialFetchCompleteEb@Base 0.3.0
- (c++|optional=gccinternal")_ZN7KPeople12PersonsModel29onMonitorInitialFetchCompleteEv@Base 0.2.0
+ (c++|optional=gccinternal|arch=amd64)_ZN7KPeople12PersonsModel29onMonitorInitialFetchCompleteEv@Base 0.2.0
  _ZN7KPeople12PersonsModel9addPersonERKNS_11MetaContactE@Base 0.2.0
  _ZN7KPeople12PersonsModelC1EP7QObject@Base 0.2.0
  _ZN7KPeople12PersonsModelC2EP7QObject@Base 0.2.0
@@ -64,9 +64,9 @@ libkpeople.so.4 libkpeople4 #MINVER#
  _ZN7KPeople18AllContactsMonitor14contactRemovedERK7QString@Base 0.2.0
  _ZN7KPeople18AllContactsMonitor16staticMetaObjectE@Base 0.2.0
  _ZN7KPeople18AllContactsMonitor20initialFetchCompleteEb@Base 0.3.0
- (c++|optional=gccinternal")_ZN7KPeople18AllContactsMonitor20initialFetchCompleteEv@Base 0.2.0
+ (c++|optional=gccinternal|arch=amd64)_ZN7KPeople18AllContactsMonitor20initialFetchCompleteEv@Base 0.2.0
  _ZN7KPeople18AllContactsMonitor24emitInitialFetchCompleteEb@Base 0.3.0
- (c++|optional=gccinternal")_ZN7KPeople18AllContactsMonitor24emitInitialFetchCompleteEv@Base 0.2.0
+ (c++|optional=gccinternal|arch=amd64)_ZN7KPeople18AllContactsMonitor24emitInitialFetchCompleteEv@Base 0.2.0
  _ZN7KPeople18AllContactsMonitor8contactsEv@Base 0.2.0
  _ZN7KPeople18AllContactsMonitorC1Ev@Base 0.2.0
  _ZN7KPeople18AllContactsMonitorC2Ev@Base 0.2.0
@@ -141,4 +141,4 @@ libkpeople.so.4 libkpeople4 #MINVER#
  _ZTVN7KPeople18AllContactsMonitorE@Base 0.2.0
  _ZTVN7KPeople20AbstractPersonActionE@Base 0.2.0
  _ZTVN7KPeople21BasePersonsDataSourceE@Base 0.2.0
- (c++|optional=gccinternal")"non-virtual think to KPeople::AbstractPersonAction::~AbstractPersonAction()@Base" 0.2.0
+ (c++|optional=gccinternal|arch=amd64)"non-virtual think to KPeople::AbstractPersonAction::~AbstractPersonAction()@Base" 0.2.0
