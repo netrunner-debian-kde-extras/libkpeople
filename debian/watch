@@ -1,2 +1,3 @@
 version=3
+http://download.kde.org/stable/libkpeople/([0-9.]+)/src/libkpeople-([0-9.]+).tar.bz2
 http://download.kde.org/unstable/libkpeople/([0-9.]+)/src/libkpeople-([0-9.]+).tar.bz2
