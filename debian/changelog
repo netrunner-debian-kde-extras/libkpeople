@@ -1,6 +1,7 @@
 libkpeople (0.3.0-3) UNRELEASED; urgency=medium
 
   * Add KDE's stable download url to watch file
+  * Update Diane Trout's email address
 
  -- Diane Trout <diane@debian.org>  Sat, 08 Aug 2015 08:45:25 -0700
 

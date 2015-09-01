@@ -1,6 +1,6 @@
 Source: libkpeople
 Priority: optional
-Maintainer: Diane Trout <diane@ghic.org>
+Maintainer: Diane Trout <diane@debian.org>
 Build-Depends: cmake,
                debhelper (>= 9),
                kdelibs5-dev,
